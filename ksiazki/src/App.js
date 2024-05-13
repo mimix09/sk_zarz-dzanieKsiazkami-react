@@ -3,6 +3,14 @@ import { FaEdit, FaTrash } from 'react-icons/fa';
 import 'bootstrap/dist/css/bootstrap.css';
 import "./App.css";
 
+// ************************************
+// pola: [books, setBooks] - przyjmuje tablice, przechowuje wszystkie dane o ksiazce
+//      [title, setTitle] - przyjmuje ciag znakow, przechowuje tytul ksiazki z input
+//      [author, setAuthor] - przyjmuje ciag znakow, przechowuje autora ksiazki z input
+//      [genre, setGenre] - przyjmuje ciag znakow, przechowuje kategorie ksiazki z input
+//      [image, setImage] - przyjmuje ciag znakow, przechowuje link do zdjecia ksiazki z input
+//      [editIndex, setEditIndex] - przyjmue wartosc liczbowa, przechowuje index z tablicy
+// ************************************
 
 function App() {
   const [books, setBooks] = useState([]);
@@ -52,7 +60,7 @@ function App() {
           <input
             type="text"
             className="form-control"
-            placeholder="Title"
+            placeholder="Tytul"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
@@ -61,7 +69,7 @@ function App() {
           <input
             type="text"
             className="form-control"
-            placeholder="Author"
+            placeholder="Autor"
             value={author}
             onChange={(e) => setAuthor(e.target.value)}
           />
@@ -70,7 +78,7 @@ function App() {
           <input
             type="text"
             className="form-control"
-            placeholder="Genre"
+            placeholder="kategoria"
             value={genre}
             onChange={(e) => setGenre(e.target.value)}
           />
@@ -79,7 +87,7 @@ function App() {
           <input
             type="text"
             className="form-control"
-            placeholder="Image URL"
+            placeholder="zdj"
             value={image}
             onChange={(e) => setImage(e.target.value)}
           />
